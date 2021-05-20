@@ -88,12 +88,8 @@ app.get("/localizacao", (req, res) => {
   res.render("localizacao");
 });
 
-app.get("/vesti", (req, res) => {
-  res.redirect("https://milvest.vesti.mobi");
-});
-
-app.get("/vestiapp", (req, res) => {
-  res.redirect("https://milvest.vesti.mobi/app");
+app.get("/loja", (req, res) => {
+  res.redirect("https://www.mvonline.com.br");
 });
 
 app.get('/termo_de_uso',(req,res)=>{
