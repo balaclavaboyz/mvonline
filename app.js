@@ -89,7 +89,7 @@ app.get("/localizacao", (req, res) => {
 });
 
 app.get("/loja", (req, res) => {
-  res.redirect("https://www.mvonline.com.br");
+  res.redirect("https://creacoesmv.lojaintegrada.com.br");
 });
 
 app.get('/termo_de_uso',(req,res)=>{
