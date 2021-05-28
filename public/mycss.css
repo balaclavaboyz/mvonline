@@ -1,9 +1,36 @@
+
 html,body{
+    font-family: 'IBM Plex Mono';font-size: 22px;
     height: 100%;
     font-size: 1.1rem;
 }
 body{
     padding-top: 44px;
+}
+.fundo{
+    z-index: -22;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/img/bgi.jpg);
+    background-size: cover;
+}
+.content-area{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    text-align: center;
+}
+.content h1{
+    font-size: 4rem;
+    letter-spacing: 4px;
+}
+.content p{
+    color: #ddd;
+    font-size: 1rem;
+    letter-spacing: 4px;
 }
 .hero-desktop{
     background-image: url(carousel-1/1.jpg);
