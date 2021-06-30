@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const compression = require('compression')
 
 const fs = require("fs");
 
@@ -19,6 +20,18 @@ mongoose.connect("mongodb://localhost/tcc", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+//compression site
+app.use(compression({
+  level: 6,
+  threshold: 10 * 1000,
+  filter: (req,res)=>{
+    if(req.headers['x-no-compression']){
+      return false
+    }
+    return compression.filter(req,res)
+  },
+}))
 
 //middleware
 app.use(express.urlencoded({ extended: true }));

@@ -25,14 +25,20 @@
       <div class="d-block d-lg-none d-xl-none d-xxl-none flex-fill">
         <div id="galeria_um" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
+            <% let count = 0 %> 
             <% for( let index = 0; index < fotoPrimeiroPainel.length; index++ ) { %>
               <% if(index === 0){ %>
                 <div class="carousel-item active">
               <% } else { %>
                 <div class="carousel-item">
               <% } %>
-              <img src="<%= dir1+'/'+String(fotoPrimeiroPainel[index]) %>" class="d-block w-100" alt="img" />
+              <% if(count>2){ %> 
+                <img src="<%= dir1+'/'+String(fotoPrimeiroPainel[index]) %>" class="d-block w-100" alt="img" loading="lazy"/>
+              <% } else { %> 
+                <img src="<%= dir1+'/'+String(fotoPrimeiroPainel[index]) %>" class="d-block w-100" alt="img" />
+              <% } %> 
             </div>
+            <% count++ %>
             <% } %>
           </div>
           <button
