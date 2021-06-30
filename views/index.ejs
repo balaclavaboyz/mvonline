@@ -63,13 +63,18 @@
         </div>
         <div id="galeria_dois" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
+            <% let count_galeria_dois = 0 %> 
             <% for( let i = 0; i < fotoSegundoPainel.length; i++ ) { %>
               <% if(i === 0){ %>
                 <div class="carousel-item active">
               <% } else { %>
                 <div class="carousel-item">
               <% } %>
+                  <% if (count_galeria_dois>2) { %>
+                    <img src="<%= dir2+'/'+String(fotoSegundoPainel[i]) %>" class="d-block w-100" alt="img" loading="lazy"/>
+                  <% } else { %>
               <img src="<%= dir2+'/'+String(fotoSegundoPainel[i]) %>" class="d-block w-100" alt="img" />
+              <% } %> 
             </div>
             <% } %>
           </div>
@@ -97,11 +102,15 @@
       <div class="d-none d-md-none d-lg-block d-xl-block d-xxl-block flex-fill">
         <div id="galeria_tres" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
+            <% let count_galeria_tres=0 %> 
             <% for( let index = 0; index < fotoPrimeiroPainel.length; index++ ) { %>
               <% if(index === 0){ %>
                 <div class="carousel-item active">
               <% } else { %>
                 <div class="carousel-item">
+              <% } %>
+              <% if (count_galeria_tres>2) { %>
+                <img src="<%= dir1+'/'+String(fotoPrimeiroPainel[index]) %>" class="d-block w-100" alt="img" loading="lazy"/>
               <% } %>
               <img src="<%= dir1+'/'+String(fotoPrimeiroPainel[index]) %>" class="d-block w-100" alt="img" />
             </div>
@@ -132,11 +141,15 @@
       <div class="d-none d-md-none d-lg-block d-xl-block d-xxl-block flex-fill">
         <div id="galeria_quatro" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
+            <%let count_galeria_quatro=0 %> 
             <% for( let i = 0; i < fotoSegundoPainel.length; i++ ) { %>
               <% if(i === 0){ %>
                 <div class="carousel-item active">
               <% } else { %>
                 <div class="carousel-item">
+              <% } %>
+              <% if (count_galeria_quatro>2) { %>
+                <img src="<%= dir2+'/'+String(fotoSegundoPainel[i]) %>" class="d-block w-100" alt="img" loading="lazy"/>
               <% } %>
               <img src="<%= dir2+'/'+String(fotoSegundoPainel[i]) %>" class="d-block w-100" alt="img" />
             </div>
