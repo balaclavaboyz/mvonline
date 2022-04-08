@@ -1,5 +1,5 @@
 const express = require("express");
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 const compression = require('compression')
 
 const fs = require("fs");
@@ -8,18 +8,18 @@ const fs = require("fs");
 // const session = require("express-session");
 
 //import from emailSchema
-const emailSchema = require("./models/email");
+// const emailSchema = require("./models/email");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+// const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 //con mongodb
-mongoose.connect("mongodb://localhost/tcc", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// mongoose.connect("mongodb://localhost/tcc", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
 
 //compression site
 app.use(compression({
