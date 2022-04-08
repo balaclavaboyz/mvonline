@@ -78,7 +78,7 @@ fs.readdir(dirSegundoPainel, (err, files) => {
 });
 
 //nav
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
   res.render("index.ejs", {
     fotoPrimeiroPainel: fotoPrimeiroPainel,
     dir1: "carousel-1",
